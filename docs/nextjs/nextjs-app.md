@@ -24,12 +24,12 @@ npx create-next-app nextjs-blog --use-npm --example "https://github.com/vercel/n
 ![img_2.png](img_2.png)
 
 ## First Try:
-- modify index.js to understand the basic concepts
+- modify index.tsx to understand the basic concepts
 
 ## Pages
 
 Page Router based on file name: 
-> pages/index.js is associated with the / route.
+> pages/index.tsx is associated with the / route.
 pages/posts/first-post.js is associated with the /posts/first-post route.
 
 ![img_3.png](img_3.png)

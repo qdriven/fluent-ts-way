@@ -17,7 +17,8 @@
     "build:utils": "pnpm --filter utils build",
     "build-tutorials": "pnpm run build --filter tutorials/*",
     "build": "pnpm run build -r",
-    "dev:nextjs-dev": "pnpm --filter @fluentdemo/nextjs-blog dev"
+    "dev:nextjs-dev": "pnpm --filter @fluentdemo/nextjs-blog dev",
+    "build:nextjs-dev": "pnpm --filter @fluentdemo/nextjs-blog build"
   },
   "browserslist": [
     "since 2018"

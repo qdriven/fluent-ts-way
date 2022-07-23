@@ -1,0 +1,62 @@
+{
+  "name": "fluentqa",
+  "version": "1.0.0",
+  "private": true,
+  "homepage": "homeless",
+  "repository": "https://github.com/qdriven/fluent-ts",
+  "description": "fluent-qa fronted sites and tutorial",
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "updates": "pnpm update -i -r --latest",
+    "install": "pnpm install",
+    "changeset": "changeset",
+    "format": "prettier --write .",
+    "lint": "eslint tutorials/** ",
+    "build:remix-demo": "pnpm --filter @fluent/remix-demo build",
+    "build:todo": "pnpm --filter todo-ui build",
+    "build:utils": "pnpm --filter utils build",
+    "build-tutorials": "pnpm run build --filter tutorials/*",
+    "build": "pnpm run build -r"
+  },
+  "browserslist": [
+    "since 2018"
+  ],
+  "manypkg": {
+    "defaultBranch": "HEAD"
+  },
+  "workspaces": [
+    "packages/*",
+    "tutorials/*"
+  ],
+  "engines": {
+    "node": ">=16.0.0",
+    "pnpm": ">=6"
+  },
+  "lint-staged": {
+    "*": [
+      "prettier --write --ignore-unknown"
+    ],
+    "packages/*/{src,types}/**/*.ts": [
+      "eslint --fix"
+    ],
+    "packages/**/*.d.ts": [
+      "eslint --fix"
+    ],
+    "playground/**/__tests__/**/*.ts": [
+      "eslint --fix"
+    ]
+  },
+  "author": "DamnPatrick",
+  "license": "DamnPatrick",
+  "simple-git-hooks": {
+    "pre-commit": "pnpm exec lint-staged --concurrent false",
+    "commit-msg": "pnpm exec esno scripts/verifyCommit.ts $1"
+  },
+  "devDependencies": {
+    "eslint": "~8.20.0",
+    "prettier": "^2.7.1"
+  },
+  "dependencies": {
+    "typescript": "^4.7.4"
+  }
+}

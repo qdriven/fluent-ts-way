@@ -12,7 +12,7 @@ export const authors: AuthorProps[] = [
   },
 ];
 
-export const getAuthorFromName = function (name: string) {
+export const getAuthorByName = function (name: string) {
   return authors.find((author) => {
     return author.name === name;
   })

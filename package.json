@@ -16,7 +16,8 @@
     "build:todo": "pnpm --filter todo-ui build",
     "build:utils": "pnpm --filter utils build",
     "build-tutorials": "pnpm run build --filter tutorials/*",
-    "build": "pnpm run build -r"
+    "build": "pnpm run build -r",
+    "dev:nextjs-dev": "pnpm --filter @fluentdemo/nextjs-blog dev"
   },
   "browserslist": [
     "since 2018"
@@ -26,7 +27,8 @@
   },
   "workspaces": [
     "packages/*",
-    "tutorials/*"
+    "tutorials/*",
+    "templates/*"
   ],
   "engines": {
     "node": ">=16.0.0",

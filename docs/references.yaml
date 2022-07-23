@@ -12,3 +12,11 @@ project-templates:
   - https://github.com/betterRunner/ts-monorepo-starter
   - https://github.com/mysteryven/ts-react-lib-starter
   - https://github.com/NiGhTTraX/ts-monorepo
+  - https://github.com/sachinraja/ts-lib-starter.git
+  - https://github.com/openwebstacks/ts-starter.git
+build:
+  - https://github.com/egoist/tsup
+
+
+nextjs-showcase:
+  - https://github.com/perkinsjr/my-developer-site-template.git

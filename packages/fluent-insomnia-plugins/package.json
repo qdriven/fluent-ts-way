@@ -1,0 +1,26 @@
+{
+  "name": "@fluent/insomina-plugins",
+  "version": "0.0.1",
+  "description": "fluent-qa insomnia plugins",
+  "main": "fluent.js",
+  "scripts": {
+    "build": "echo \"NO Build Needed!\"",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Patrick",
+  "license": "Private",
+  "insomnia": {
+    "name": "fluent-plugins",
+    "description": "fluent-qa insomnia plugins",
+    "images": {
+      "icon": "icon.svg"
+    },
+    "application": {
+      "core": "*",
+      "cli": "*"
+    }
+  },
+  "dependencies": {
+    "axios": "^0.27.2"
+  }
+}

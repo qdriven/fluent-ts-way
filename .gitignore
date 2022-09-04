@@ -165,3 +165,29 @@ cc-reporter
 /tsconfig.docs.json
 /typedoc.json
 /.markdownlint.json
+### Node ###
+# Logs
+logs
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Coverage directory used by tools like istanbul
+coverage
+
+# nyc test coverage
+.nyc_output
+
+# Node Modules
+
+node_modules/
+
+# Parcel cache and distribution folders
+
+.cache/
+
+dist/
+
+# Don't commit .gitignores that are not part of templates
+packages/cip-teplate-*/.gitignore

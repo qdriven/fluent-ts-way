@@ -12,6 +12,11 @@
     "changeset": "changeset",
     "format": "prettier --write .",
     "lint": "eslint tutorials/** ",
+    "build:qatips": "pnpm --filter @fluent/qatips build",
+    "install:qatips": "pnpm --filter @fluent/qatips install",
+    "start:qatips": "pnpm --filter @fluent/qatips start",
+    "dev:qatips": "pnpm --filter @fluent/qatips dev",
+
     "build:remix-demo": "pnpm --filter @fluent/remix-demo build",
     "build:todo": "pnpm --filter todo-ui build",
     "build:utils": "pnpm --filter utils build",

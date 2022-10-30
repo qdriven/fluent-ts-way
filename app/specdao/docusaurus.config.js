@@ -117,6 +117,11 @@ const config = {
             position: 'left',
           },
           {
+            href: '/learning-center',
+            label: '学习中心1',
+            position: 'left',
+          },
+          {
             href: '/solidity-start/',
             position: 'left',
             label: '智能合约入门',

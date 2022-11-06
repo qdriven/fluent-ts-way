@@ -1,0 +1,64 @@
+---
+import { dateFilter } from '../lib/dateFilter.js';
+const { article, lazy } = Astro.props;
+const isCDNImage = (article.image?.indexOf("http") === 0);
+---
+
+<article
+  class="relative flex justify-between px-4 py-4 border-b border-gray-200 group md:border-0 dark:border-slate-700 md:flex-col-reverse"
+>
+  <a
+    href={article?.url}
+    title={article?.title}
+    aria-label={article?.title}
+    class="absolute inset-0 z-10 w-full h-full"></a>
+  <div class="flex flex-col flex-1">
+    <h3
+      class="flex-1 mb-2 text-xl font-medium leading-6 transition-colors ease-in-out dark:text-white group-hover:text-barbie"
+      set:html={article?.title}
+    >
+    </h3>
+    <p
+      class="flex flex-wrap items-center text-sm text-gray-500 dark:text-gray-400"
+    >
+      {dateFilter(article.date)} ·<svg
+        xmlns="http://www.w3.org/2000/svg"
+        fill="currentColor"
+        class="w-5 h-5 ml-1 mr-1"
+        viewBox="0 0 32 32"
+        ><path
+          d="M 3 6 L 3 25 L 13 25 C 14.101563 25 15 25.898438 15 27 L 17 27 C 17 25.898438 17.898438 25 19 25 L 29 25 L 29 6 L 19 6 C 17.808594 6 16.734375 6.527344 16 7.359375 C 15.265625 6.527344 14.191406 6 13 6 Z M 5 8 L 13 8 C 14.101563 8 15 8.898438 15 10 L 17 10 C 17 8.898438 17.898438 8 19 8 L 27 8 L 27 23 L 19 23 C 17.808594 23 16.734375 23.527344 16 24.359375 C 15.265625 23.527344 14.191406 23 13 23 L 5 23 Z M 15 12 L 15 14 L 17 14 L 17 12 Z M 15 16 L 15 18 L 17 18 L 17 16 Z M 15 20 L 15 22 L 17 22 L 17 20 Z"
+        ></path></svg
+      >
+      {article?.readingTime}
+    </p>
+  </div>
+  <div
+    class="flex-none w-24 h-24 mb-0 ml-6 md:ml-0 md:h-auto md:w-auto aspect-none md:aspect-w-19 md:aspect-h-1 md:mb-4"
+  >
+    <picture>
+      {isCDNImage && (
+        <source
+          media="(max-width: 767px)"
+          width="96"
+          height="96"
+          srcset=`${article?.image}/m, ${article?.image}/mr 2x`
+        />
+        <source
+          media="(min-width: 768px)"
+          width="368"
+          height="193"
+          srcset=`${article?.image}/d, ${article?.image}/dr 2x, ${article?.image}/og 3x`
+        />
+      )}
+      <img
+        class="object-cover w-full h-full transition-opacity rounded-lg drop-shadow group-hover:opacity-90"
+        src={`${article?.image}${isCDNImage ? '/d' : ''}` ?? '/images/fallback.png'}
+        width="368"
+        height="193"
+        alt={article?.title}
+        loading={lazy ? 'lazy' : 'eager'}
+      />
+    </picture>
+  </div>
+</article>

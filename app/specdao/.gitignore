@@ -1,0 +1,9 @@
+node_modules/
+.pnp.cjs
+.pnp.loader.mjs
+.yarn
+.docusaurus
+build
+.DS_Store
+**/.DS_Store
+

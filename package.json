@@ -38,14 +38,15 @@
     "husky": "^8.0.0",
     "lint-staged": "^13.0.0",
     "prettier": "^2.7.0",
-    "turbo": "1.4.6",
+    "turbo": "^1.6.3",
     "vitest": "0.12.6"
   },
   "workspaces": {
     "packages": [
       "packages/*",
       "tutorials/*",
-      "app/*"
+      "app/*",
+      "templates/*"
     ]
   },
   "packageManager": "yarn@3.2.1"

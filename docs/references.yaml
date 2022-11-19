@@ -14,9 +14,15 @@ project-templates:
   - https://github.com/NiGhTTraX/ts-monorepo
   - https://github.com/sachinraja/ts-lib-starter.git
   - https://github.com/openwebstacks/ts-starter.git
+  - https://github.com/remirror/template.git
+
 build:
   - https://github.com/egoist/tsup
 
 
 nextjs-showcase:
   - https://github.com/perkinsjr/my-developer-site-template.git
+  - https://github.com/m1guelpf/mirror-next.git
+
+website:
+  - https://flowbite.com/

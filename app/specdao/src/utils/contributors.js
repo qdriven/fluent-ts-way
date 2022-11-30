@@ -4,7 +4,7 @@ const octokit = new Octokit();
 
 export async function GetContributors(
     owner =  'specbiz-web3',
-    repo = 'specbiz-web3.github.io',
+    repo = 'https"//github.com/specbiz/specbiz-web3.github.io',
     page = 1,
     per_page = 100
 ) {

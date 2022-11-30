@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css?family=Dosis:500,600');
+@import url('https://fonts.googleapis.com/css?family=Exo:600');
+
+body {
+    margin: 0;
+    font-family: 'Dosis';
+    text-align: center;
+    background: #f0f0f0;
+}
+
+.container {
+    width: 60em;
+    margin: 5em auto;
+}
+
+.oops {
+    font-size: 3.5em;
+}
+
+.bigtext {
+    font-size: 2em;
+}
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 5em;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 1em;
+    background: #101010;
+    color: #f0f0f0;
+    box-shadow: 0 3px 3px #a0a0a0;
+    box-sizing: border-box;
+    z-index: 1;
+}
+
+.title img {
+    height: 5em;
+}
+
+.hostname {
+    font-size: 2.2em;
+    color: #60b0ff;
+    font-family: 'Exo';
+}
+
+.hostname a {
+    text-decoration: none;
+}
+
+.hostname a:link,
+.hostname a:visited,
+.hostname a:focus,
+.hostname a:active {
+    color: #60b0ff;
+}
+
+.platform {
+    font-size: 1.2em;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+.title,
+.platform {
+    width: 15em;
+}
+
+.os {
+    color: #60b0ff;
+}
+
+.cores {
+    color: #60ff60;
+}
+
+.cpu {
+    color: #908ae8;
+}
+
+.info {
+    padding-top: 1em;
+}
+
+.moving-stats {
+    font-size: 1.25em;
+    margin: 1em 0 1.5em 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.uptime span {
+    color: #00b040;
+}
+
+.processes span {
+    color: #00b040;
+}
+
+.tooltip {
+    height: 1em;
+    padding: 0.5em;
+    background: #ffffff;
+    box-shadow: 2px 2px 2px #a0a0a0;
+    border-radius: 0.2em;
+}
+
+.tooltip.multi {
+    height: 3.5em;
+}
+
+.tooltip-line {
+    text-transform: capitalize;
+}
+
+.card {
+    background: #ffffff;
+    padding: 1em 2em;
+    box-shadow: 3px 3px 3px #a0a0a0;
+    border-radius: 0.25em;
+    margin-bottom: 0.5em;
+}
+
+.graph {
+    padding: 1em 0;
+}
+
+.graph-row {
+    display: flex;
+    justify-content: space-between;
+}
+
+.graph-data {
+    display: flex;
+    justify-content: space-between;
+    padding: 1em 1.5em;
+}
+
+.graph-name {
+    font-size: 1.2em;
+    font-weight: 600;
+}
+
+.graph-current span {
+    color: #4090f0;
+}
+
+.graph-available span {
+    color: #00b040;
+}
+
+.graph-max span {
+    color: #c04020;
+}
+
+.graph-left {
+    border-right: solid 1px #f0f0f0;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        font-size: 0.65em;
+    }
+
+    .moving-stats {
+        margin: 0em 1em 1.5em 1em;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .container {
+        width: calc(100vw - 2em);
+        margin: 3.5em auto 0 auto;
+    }
+
+    .card {
+        padding: 1em 0.5em;
+    }
+
+    .graph-left {
+        border-right: none;
+    }
+
+    .graph-row {
+        display: block;
+    }
+}

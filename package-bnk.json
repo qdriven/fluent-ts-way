@@ -1,0 +1,40 @@
+{
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "preinstall": "npx only-allow pnpm",
+    "install": "pnpm install --shamefully-hoist",
+    "up": "pnpm up"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/qdriven/fluent-ts-way.git"
+  },
+  "lint-staged": {
+    "./packages/*/src/**/*.+(js|jsx|ts|tsx)": [
+      "eslint --fix"
+    ],
+    "./packages/*/src/**/*.+(js|jsx|ts|tsx|json|css|md|mdx)": [
+      "prettier --write"
+    ]
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.24.0",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.1.0",
+    "@types/react": "18.0.25",
+    "husky": "^8.0.0",
+    "lint-staged": "^13.0.0",
+    "prettier": "^2.7.0",
+    "turbo": "^1.6.3",
+    "vitest": "0.12.6"
+  },
+  "workspaces": {
+    "packages": [
+      "packages/*",
+      "tutorials/*",
+      "app/*",
+      "templates/*"
+    ]
+  }
+}

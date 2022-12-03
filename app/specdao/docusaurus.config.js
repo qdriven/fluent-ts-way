@@ -42,7 +42,7 @@ const SECTIONS = [
 const config = {
   title: 'SpecBiz@Web3',
   tagline: '面向好奇者的Web3开源学院\n',
-  url: 'specbiz-web3.github.io',
+  url: 'https://specbiz-web3.github.io',
   baseUrl: '/',
   onBrokenLinks: 'throw',
   onBrokenMarkdownLinks: 'warn',
@@ -117,11 +117,6 @@ const config = {
             position: 'left',
           },
           {
-            href: '/learning-center',
-            label: '学习中心1',
-            position: 'left',
-          },
-          {
             href: '/solidity-start/',
             position: 'left',
             label: '智能合约入门',
@@ -129,13 +124,8 @@ const config = {
           {
             href: '/solidity-start/',
             position: 'left',
-            label: 'Web3前后端开发入门',
+            label: 'Web3fullstack开发入门',
           },
-          // {
-          //   href: 'https://github.com/AmazingAng/WTFSolidity/discussions',
-          //   label: '论坛',
-          //   position: 'left',
-          // },
           {
             type: 'custom-profile',
             position: 'right'
